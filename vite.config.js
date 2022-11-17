@@ -9,6 +9,9 @@ function resolve(dir) {
 }
 
 export default defineConfig({
+    build: {
+        outDir: 'docs'
+    },
     plugins: [
         vue(),
         prismjs({
