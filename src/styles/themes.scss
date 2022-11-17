@@ -1,0 +1,17 @@
+:root {
+    --aside-bg: #20222a;
+    --aside-active-bg: #050505;
+    --header-bg: #fff;
+    --app-bg: #f0f2f5;
+    --thead-bg: #fafafa;
+    --thead-color: rgb(0, 0, 0, 0.85);
+    --primary-color: var(--el-color-primary);
+}
+
+:root[data-theme=dark] {
+    --aside-bg: #171719;
+    --aside-active-bg: #000;
+    --header-bg: #272727;
+    --app-bg: #323232;
+    --text-color: #fff;
+}

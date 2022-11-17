@@ -1,0 +1,123 @@
+.aside {
+    user-select: none;
+    position: relative;
+    height: 100vh;
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    transition: width 0.3s;
+    width: 240px !important;
+    overflow: hidden;
+    background: var(--aside-bg);
+    display: flex;
+    flex-direction: column;
+
+    &.collapse {
+        width: 64px !important;
+
+        .el-menu-item span,
+        .el-sub-menu__title span {
+            display: none;
+        }
+    }
+
+    .logo {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .bottom-btn {
+        height: 50px;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .el-scrollbar {
+        flex-grow: 1;
+        min-height: 0;
+
+        .el-scrollbar__wrap {
+            overflow-x: hidden;
+        }
+    }
+
+    .el-sub-menu__title,
+    .el-menu-item {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.5);
+
+        &:hover {
+            color: #fff;
+        }
+
+        &::before {
+            content: '';
+            top: 50%;
+            left: 0;
+            height: 0;
+            width: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            transform: translateY(-50%);
+        }
+
+        &.is-active {
+            color: #fff;
+            background: var(--aside-active-bg);
+
+            &::before {
+                transition: height 0.2s;
+                height: 100%;
+            }
+        }
+
+        i {
+            margin-right: 10px;
+            color: inherit;
+        }
+    }
+}
+
+// 弹出的菜单
+.sub-menu-popup {
+    background: var(--aside-bg);
+    border-radius: 4px;
+
+    .el-menu-item {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.5);
+
+        &:hover {
+            color: #fff;
+        }
+
+        &::before {
+            content: '';
+            top: 50%;
+            left: 0;
+            height: 0;
+            width: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            transform: translateY(-50%);
+        }
+
+        &.is-active {
+            color: #fff;
+            background: var(--aside-active-bg);
+
+            &::before {
+                transition: height 0.2s;
+                height: 100%;
+            }
+        }
+
+        i {
+            margin-right: 10px;
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,202 @@
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: var(--app-bg);
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #dedfe1;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+@for $value from 1 through 10 {
+    // margin
+    .ma-#{$value} {
+        margin: $value * 4 + px;
+    }
+    .mx-#{$value} {
+        margin-left: $value * 4 + px;
+        margin-right: $value * 4 + px;
+    }
+    .my-#{$value} {
+        margin-top: $value * 4 + px;
+        margin-bottom: $value * 4 + px;
+    }
+    .mt-#{$value} {
+        margin-top: $value * 4 + px;
+    }
+    .mb-#{$value} {
+        margin-bottom: $value * 4 + px;
+    }
+    .ml-#{$value} {
+        margin-left: $value * 4 + px;
+    }
+    .mr-#{$value} {
+        margin-right: $value * 4 + px;
+    }
+
+    // padding
+    .pa-#{$value} {
+        padding: $value * 4 + px;
+    }
+    .px-#{$value} {
+        padding-left: $value * 4 + px;
+        padding-right: $value * 4 + px;
+    }
+    .py-#{$value} {
+        padding-top: $value * 4 + px;
+        padding-bottom: $value * 4 + px;
+    }
+    .pt-#{$value} {
+        padding-top: $value * 4 + px;
+    }
+    .pb-#{$value} {
+        padding-bottom: $value * 4 + px;
+    }
+    .pl-#{$value} {
+        padding-left: $value * 4 + px;
+    }
+    .pr-#{$value} {
+        padding-right: $value * 4 + px;
+    }
+}
+
+.pr {
+    position: relative;
+}
+.pa {
+    position: absolute;
+}
+.pf {
+    position: fixed;
+}
+.oh {
+    overflow: hidden;
+}
+.oh-x {
+    overflow-x: hidden;
+}
+.oh-y {
+    overflow-y: hidden;
+}
+.oa {
+    overflow: auto;
+}
+.oa-x {
+    overflow-x: auto;
+}
+.oa-y {
+    overflow-y: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.c-p {
+    cursor: pointer;
+}
+
+.ellipsis-1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@for $value from 2 through 3 {
+    .ellipsis-#{$value} {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $value;
+        -webkit-box-orient: vertical;
+    }
+}
+
+$justify-content: center, space-between, space-around, space-evenly;
+@each $value in $justify-content {
+    .flex-#{$value} {
+        display: flex;
+        align-items: center;
+        justify-content: $value;
+    }
+}
+
+$display: inline-block, inline-flex, block, flex, grid, none;
+@each $value in $display {
+    .d-#{$value} {
+        display: $value;
+    }
+}
+
+.align-start {
+    align-items: flex-start;;
+}
+.align-end {
+    align-items: flex-end;;
+}
+$align-items: center, stretch;
+@each $value in $align-items {
+    .align-#{$value} {
+        align-items: $value;;
+    }
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+@each $value in $justify-content {
+    .justify-#{$value} {
+        justify-content: $value;
+    }
+}
+
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+[class^='icon-'] {
+    font-family: 'iconfont';
+    font-size: 18px;
+    font-style: normal;
+}

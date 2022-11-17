@@ -1,0 +1,20 @@
+// iconfont
+@import '//at.alicdn.com/t/font_2764032_bneg1zzmdd6.css';
+
+// 全局样式
+@import './global.scss';
+
+// element-plus 样式覆盖
+@import './element-plus.scss';
+
+// 侧边栏
+@import './aside.scss';
+
+// 顶栏
+@import './header.scss';
+
+// 过渡动画
+@import './transition.scss';
+
+// 主题
+@import './themes';
