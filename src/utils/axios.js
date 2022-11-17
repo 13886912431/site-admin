@@ -4,7 +4,9 @@ import { ElMessage } from 'element-plus';
 import router from '@/router';
 import store from '@/store';
 
-const instance = axios.create();
+const instance = axios.create({
+    baseURL: import.meta.env.VITE_BASE_URL
+});
 
 instance.interceptors.request.use(request => {
     const token = store.getters.token;

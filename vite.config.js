@@ -25,12 +25,6 @@ export default defineConfig({
         include: ['@kangc/v-md-editor/lib/theme/vuepress.js'],
     },
     server: {
-        port: 3303,
-        proxy: {
-            '/api': {
-                target: 'http://localhost:5008',
-                changeOrigin: true
-            }
-        }
+        port: 3303
     }
 });
