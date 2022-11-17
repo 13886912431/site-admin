@@ -10,7 +10,7 @@ NProgress.configure({
 });
 
 const createRouter = () => createVueRouter({
-    history: createWebHashHistory(),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
     routes: constantRoutes
 });
 

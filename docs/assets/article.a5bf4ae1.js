@@ -1,0 +1,1 @@
+import{A as e}from"./index.39c418b0.js";const a=t=>e.get("/api/article",{params:t}),c=t=>e.get(`/api/article/${t}`),s=t=>e.post("/api/article",t),l=t=>e.delete(`/api/article/${t}`),r=t=>e.put(`/api/article/${t.id}`,t);export{c as a,s as b,l as d,a as g,r as u};
